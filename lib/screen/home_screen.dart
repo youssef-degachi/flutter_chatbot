@@ -1,7 +1,9 @@
+import 'package:chatpot_flutter/providers/chat_provider.dart';
 import 'package:chatpot_flutter/screen/chat_history_screen.dart';
 import 'package:chatpot_flutter/screen/chat_screen.dart';
 import 'package:chatpot_flutter/screen/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
