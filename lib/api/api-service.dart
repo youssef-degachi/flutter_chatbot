@@ -1,3 +1,7 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class ApiService {
-  static const apiKey = 'YOUR_API_KEY'; // your api
+  static String get apiKey {
+    return dotenv.env['API_KEY'] ?? '';
+  }
 }
