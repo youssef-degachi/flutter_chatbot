@@ -1,7 +1,6 @@
 import 'dart:io';
+import 'package:chatpot_flutter/utility/assets_manager.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gemini/utility/assets_manager.dart';
-
 class BuildDisplayImage extends StatelessWidget {
   const BuildDisplayImage({
     super.key,

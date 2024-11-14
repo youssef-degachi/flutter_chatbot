@@ -1,8 +1,8 @@
+import 'package:chatpot_flutter/models/message.dart';
+import 'package:chatpot_flutter/providers/chat_provider.dart';
+import 'package:chatpot_flutter/widgets/assistance_message_widget.dart';
+import 'package:chatpot_flutter/widgets/my_message_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gemini/models/message.dart';
-import 'package:flutter_gemini/providers/chat_provider.dart';
-import 'package:flutter_gemini/widgets/assistance_message_widget.dart';
-import 'package:flutter_gemini/widgets/my_message_widget.dart';
 
 class ChatMessages extends StatelessWidget {
   const ChatMessages({

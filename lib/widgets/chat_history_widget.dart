@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gemini/hive/chat_history.dart';
-import 'package:flutter_gemini/providers/chat_provider.dart';
-import 'package:flutter_gemini/utility/utilites.dart';
+import 'package:chatpot_flutter/hive/chat_history.dart';
+import 'package:chatpot_flutter/utility/utilites.dart';
 import 'package:provider/provider.dart';
+import 'package:chatpot_flutter/providers/chat_provider.dart';
 
 class ChatHistoryWidget extends StatelessWidget {
   const ChatHistoryWidget({

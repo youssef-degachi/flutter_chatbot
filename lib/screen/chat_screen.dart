@@ -4,7 +4,6 @@ import 'package:chatpot_flutter/utility/utilites.dart';
 import 'package:chatpot_flutter/widgets/bottom_chat_field.dart';
 import 'package:chatpot_flutter/widgets/chat_messages.dart';
 import 'package:provider/provider.dart';
-
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
 

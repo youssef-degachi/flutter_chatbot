@@ -1,18 +1,21 @@
-import 'dart:math';
+import 'dart:async';
+import 'dart:developer';
 import 'dart:typed_data';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:chatpot_flutter/api/api-service.dart';
 import 'package:chatpot_flutter/constants.dart';
 import 'package:chatpot_flutter/hive/boxes.dart';
 import 'package:chatpot_flutter/hive/chat_history.dart';
-import 'package:chatpot_flutter/hive/setting.dart';
+import 'package:chatpot_flutter/hive/settings.dart';
 import 'package:chatpot_flutter/hive/user_model.dart';
 import 'package:chatpot_flutter/models/message.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:google_generative_ai/google_generative_ai.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:path_provider/path_provider.dart' as path;
 import 'package:image_picker/image_picker.dart';
+import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:uuid/uuid.dart';
 
 class ChatProvider extends ChangeNotifier {
@@ -338,10 +341,10 @@ class ChatProvider extends ChangeNotifier {
               element.role.name == Role.assistant.name)
           .message
           .write(event.text);
-      log("event: ${event.text}");
+      log('event: ${event.text}');
       notifyListeners();
     }, onDone: () async {
-      log("stream done");
+      log('stream done');
       // save message to hive db
       await saveMessagesToDB(
         chatID: chatId,
@@ -452,7 +455,7 @@ class ChatProvider extends ChangeNotifier {
 
   // init Hive box
   static initHive() async {
-    final dir = await Path.getApplicationDocumentsDirectory();
+    final dir = await path.getApplicationDocumentsDirectory();
     Hive.init(dir.path);
     await Hive.initFlutter(Constants.geminiDB);
 

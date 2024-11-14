@@ -1,8 +1,8 @@
 import 'dart:io';
 
+import 'package:chatpot_flutter/models/message.dart';
+import 'package:chatpot_flutter/providers/chat_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gemini/models/message.dart';
-import 'package:flutter_gemini/providers/chat_provider.dart';
 import 'package:provider/provider.dart';
 
 class PreviewImagesWidget extends StatelessWidget {

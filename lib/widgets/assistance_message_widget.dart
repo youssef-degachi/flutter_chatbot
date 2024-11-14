@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
+import 'package:chatpot_flutter/models/message.dart';
 class AssistantMessageWidget extends StatelessWidget {
   const AssistantMessageWidget({
     super.key,
